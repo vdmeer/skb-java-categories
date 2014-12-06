@@ -13,7 +13,8 @@ import org.junit.rules.ExpectedException;
 import de.vandermeer.skb.categories.IsID;
 import de.vandermeer.skb.categories.dsl.curlybracket.IsScopedID;
 import de.vandermeer.skb.categories.dsl.curlybracket.IsScopedID_Mutable;
-import de.vandermeer.skb.categories.dsl.curlybracket.TestTokens;
+import de.vandermeer.skb.categories.dsl.curlybracket.IsTokentype_tests;
+import de.vandermeer.skb.categories.dsl.curlybracket.IsTokentype_tests.TestTokens;
 import de.vandermeer.skb.categories.kvt.ScopeKey;
 import de.vandermeer.skb.categories.kvt.SwitchKey;
 
@@ -25,13 +26,13 @@ public class IsSymbol_Tests {
 		exception.expect(RuntimeErrorException.class);
 
 		IsScopedID_Mutable scope = IsScopedID_Mutable.createMutable();
-		scope.push("one", TestTokens.STRING);
+		scope.push("one", IsTokentype_tests.TestTokens.STRING);
 		IsScopedID isi=scope.getStaticScope();
 
 		IsSymbol.create(null, null, null);
-		IsSymbol.create(null, null, TestTokens.STRING);
+		IsSymbol.create(null, null, IsTokentype_tests.TestTokens.STRING);
 		IsSymbol.create(IsID.create("one"), null, TestTokens.STRING);
-		IsSymbol.create(null, isi, TestTokens.STRING);
+		IsSymbol.create(null, isi, IsTokentype_tests.TestTokens.STRING);
 	}
 
 	@Test public void testTestMe(){
