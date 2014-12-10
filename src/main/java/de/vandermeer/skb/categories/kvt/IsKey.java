@@ -24,7 +24,7 @@ import de.vandermeer.skb.categories.HasDescription;
  * Category of objects that represent a key.
  *
  * @author     Sven van der Meer &lt;vdmeer.sven@mykolab.com&gt;
- * @version    v0.0.2 build 140611 (11-Jun-14) with Java 1.8
+ * @version    v0.0.3-SNAPSHOT build 141210 (10-Dec-14) for Java 1.8
  */
 public interface IsKey<K> extends CategoryIs, CategoryWithValue, HasDescription {
 	/**
@@ -40,6 +40,7 @@ public interface IsKey<K> extends CategoryIs, CategoryWithValue, HasDescription 
 
 	/**
 	 * Returns a new generic {@link IsKey} object with a preset key (immutable).
+	 * @param <K> type of the key value
 	 * @param key the object's key
 	 * @param description a description for the new key
 	 * @return new {@link IsKey} object with a set key
@@ -60,6 +61,7 @@ public interface IsKey<K> extends CategoryIs, CategoryWithValue, HasDescription 
 
 	/**
 	 * Returns a new generic {@link IsKey} object with a pre-set key and default description (immutable).
+	 * @param <K> type of the key value
 	 * @param key the object's key
 	 * @return new {@link IsKey} object with a set key
 	 */
@@ -69,6 +71,7 @@ public interface IsKey<K> extends CategoryIs, CategoryWithValue, HasDescription 
 
 	/**
 	 * Returns a new generic {@link IsKey} object with a default preset key (immutable).
+	 * @param <K> type of the key value
 	 * @return new {@link IsKey} object with a default key
 	 */
 	static <K> IsKey<K> create(){

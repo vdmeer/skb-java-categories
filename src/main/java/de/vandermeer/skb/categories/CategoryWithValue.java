@@ -45,8 +45,8 @@ public interface CategoryWithValue {
 	}
 
 	/**
-	 * Returns the value a given object of type {@link CategoryWithValue} as object.
-	 * @param input object
+	 * Returns the value a given object as object using the {@link CategoryWithValue#CAT_TO_VALUE()} transformer.
+	 * @param in object
 	 * @return value object or null
 	 */
 	static Object GET_VALUE(Object in){
@@ -70,8 +70,8 @@ public interface CategoryWithValue {
 	}
 
 	/**
-	 * Returns the value a given object of type {@link CategoryWithValue} as string.
-	 * @param input object
+	 * Returns the value a given object as string using the {@link CategoryWithValue#CAT_TO_VALUESTRING()} transformer.
+	 * @param in object
 	 * @return value string or null
 	 */
 	static String GET_VALUESTRING(Object in){

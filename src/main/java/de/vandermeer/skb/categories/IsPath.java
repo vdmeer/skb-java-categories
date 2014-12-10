@@ -33,7 +33,7 @@ import de.vandermeer.skb.collections.CollectionFilters;
  * Category of objects that represent a path.
  *
  * @author     Sven van der Meer &lt;vdmeer.sven@mykolab.com&gt;
- * @version    v0.0.2 build 140611 (11-Jun-14) with Java 1.8
+ * @version    v0.0.3-SNAPSHOT build 141210 (10-Dec-14) for Java 1.8
  */
 public interface IsPath extends CategoryIs, CategoryWithValue, HasDescription {
 	/**

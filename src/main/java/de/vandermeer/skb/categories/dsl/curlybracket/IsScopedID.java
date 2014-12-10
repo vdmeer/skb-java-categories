@@ -91,7 +91,7 @@ public interface IsScopedID extends CategoryIs, CategoryWithValue, Skb_Renderabl
 	 * Keys for values associated with parts of a scoped name.
 	 *
 	 * @author     Sven van der Meer &lt;vdmeer.sven@mykolab.com&gt;
-	 * @version    v0.0.1 build 120719 (19-Jul-12) with Java 1.7
+	 * @version    v0.0.3-SNAPSHOT build 141210 (10-Dec-14) for Java 1.8
 	 */
 	public enum PropAttributes implements IsAttributeKey {
 		/** Type of the symbol represented by an element of the scoped name */
