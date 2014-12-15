@@ -9,11 +9,9 @@ import org.stringtemplate.v4.ST;
 
 import de.vandermeer.skb.categories.CategoryIs;
 import de.vandermeer.skb.categories.HasID;
-import de.vandermeer.skb.categories.IsID;
 import de.vandermeer.skb.categories.dsl.curlybracket.HasScopedID;
 import de.vandermeer.skb.categories.dsl.curlybracket.HasTokentype;
 import de.vandermeer.skb.categories.dsl.curlybracket.IsScopedID;
-import de.vandermeer.skb.categories.dsl.curlybracket.IsTokentype;
 import de.vandermeer.skb.categories.kvt.ScopeKey;
 import de.vandermeer.skb.categories.kvt.SwitchKey;
 
@@ -97,7 +95,7 @@ public interface IsSymbol extends CategoryIs, HasID, HasScopedID, HasTokentype {
 	//TODO
 	IsSymbol changeCallScope(IsScopedID scIdent, ScopeKey callScope, SwitchKey state);
 
-	static IsSymbol create(IsID ident, IsScopedID scopedIdent, IsTokentype type){
-		return new IsSymbol_Impl(ident, scopedIdent, type);
-	}
+//	static IsSymbol create(IsID ident, IsScopedID scopedIdent, IsTokentype type){
+//		return new IsSymbol_Impl(ident, scopedIdent, type);
+//	}
 }

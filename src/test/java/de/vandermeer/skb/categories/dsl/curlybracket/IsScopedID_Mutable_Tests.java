@@ -13,7 +13,7 @@ import de.vandermeer.skb.categories.dsl.curlybracket.IsScopedID.PropAttributes;
 public class IsScopedID_Mutable_Tests {
 
 	@Test public void testScopeConstructor(){
-		IsScopedID_Mutable mscope = IsScopedID_Mutable.createMutable();
+		IsScopedID_Mutable mscope = new IsScopedID_Mutable_Impl();
 
 		assertNotNull(mscope.getScope());
 		assertTrue(mscope.getScope().isEmpty());
@@ -32,7 +32,7 @@ public class IsScopedID_Mutable_Tests {
 	}
 
 	@Test public void testPush(){
-		IsScopedID_Mutable mscope = IsScopedID_Mutable.createMutable();
+		IsScopedID_Mutable mscope = new IsScopedID_Mutable_Impl();
 
 		mscope.push("test", TestScope.ttString);
 		mscope.push(1, 		TestScope.ttInteger);
@@ -44,7 +44,7 @@ public class IsScopedID_Mutable_Tests {
 	}
 
 	@Test public void testPop(){
-		IsScopedID_Mutable mscope = IsScopedID_Mutable.createMutable();
+		IsScopedID_Mutable mscope = new IsScopedID_Mutable_Impl();
 
 		mscope.push("p0", TestScope.tt);
 		mscope.push("p1", TestScope.tt);
@@ -98,7 +98,7 @@ public class IsScopedID_Mutable_Tests {
 	}
 
 	@Test public void testGetValue(){
-		IsScopedID_Mutable mscope = IsScopedID_Mutable.createMutable();
+		IsScopedID_Mutable mscope = new IsScopedID_Mutable_Impl();
 
 		mscope.push("one", TestScope.tt);
 		assertEquals(1, mscope.size());

@@ -35,7 +35,7 @@ public interface IsScopedID_Mutable extends IsScopedID {
 	 */
 	Object pop();
 
-	static IsScopedID_Mutable createMutable(){
-		return new IsScopedID_Mutable_Impl();
-	}
+//	static IsScopedID_Mutable createMutable(){
+//		return new IsScopedID_Mutable_Impl();
+//	}
 }

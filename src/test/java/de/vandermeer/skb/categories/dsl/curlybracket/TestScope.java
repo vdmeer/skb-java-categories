@@ -10,7 +10,7 @@ public interface TestScope {
 	static IsTokentype ttBoolean = IsTokentype.create("boolean", "boolean", "a boolean");
 
 	static IsScopedID_Mutable testScope(){
-		IsScopedID_Mutable ret = IsScopedID_Mutable.createMutable();
+		IsScopedID_Mutable ret = new IsScopedID_Mutable_Impl();
 
 		ret.push("test",	 TestScope.ttString);
 		ret.push(1, 		TestScope.ttInteger);

@@ -13,8 +13,8 @@ import de.vandermeer.skb.categories.dsl.curlybracket.IsScopedID.PropAttributes;
 public class IsScopedID_Tests {
 
 	@Test public void testConstructorRaw(){
-		IsScopedID_Mutable mscope = IsScopedID_Mutable.createMutable();
-		IsScopedID sn = IsScopedID.create(mscope.getScope(), mscope.getProperties());
+		IsScopedID_Mutable mscope = new IsScopedID_Mutable_Impl();
+		IsScopedID sn = CB_Factory.createScopedID(mscope.getScope(), mscope.getProperties());
 
 		assertNotNull(sn.getScope());
 		assertNotNull(sn._value());
@@ -33,8 +33,8 @@ public class IsScopedID_Tests {
 
 
 	@Test public void testConstructorWScope(){
-		IsScopedID_Mutable mscope = IsScopedID_Mutable.createMutable();
-		IsScopedID sn = IsScopedID.create(mscope.getScope(), mscope.getProperties());
+		IsScopedID_Mutable mscope = new IsScopedID_Mutable_Impl();
+		IsScopedID sn = CB_Factory.createScopedID(mscope.getScope(), mscope.getProperties());
 
 		assertNotNull(sn.getScope());
 		assertTrue(sn.getScope().isEmpty());
@@ -51,7 +51,7 @@ public class IsScopedID_Tests {
 	}
 
 	@Test public void testPeekRaw(){
-		IsScopedID_Mutable mscope = IsScopedID_Mutable.createMutable();
+		IsScopedID_Mutable mscope = new IsScopedID_Mutable_Impl();
 		IsTokentype tt = IsTokentype.create("string", "string", "a string");
 
 		mscope.push("p0", tt);
@@ -59,7 +59,7 @@ public class IsScopedID_Tests {
 		mscope.push("p2", tt);
 		mscope.push("p3", tt);
 
-		IsScopedID sn = IsScopedID.create(mscope.getScope(), mscope.getProperties());
+		IsScopedID sn = CB_Factory.createScopedID(mscope.getScope(), mscope.getProperties());
 
 		assertFalse(sn.isEmpty());
 		assertEquals(4, sn.size());
@@ -72,7 +72,7 @@ public class IsScopedID_Tests {
 	}
 
 	@Test public void testPeekWScope(){
-		IsScopedID_Mutable mscope = IsScopedID_Mutable.createMutable();
+		IsScopedID_Mutable mscope = new IsScopedID_Mutable_Impl();
 		IsTokentype tt = IsTokentype.create("string", "string", "a string");
 
 		mscope.push("p0", tt);
@@ -80,7 +80,7 @@ public class IsScopedID_Tests {
 		mscope.push("p2", tt);
 		mscope.push("p3", tt);
 
-		IsScopedID sn = IsScopedID.create(mscope.getScope(), mscope.getProperties());
+		IsScopedID sn = CB_Factory.createScopedID(mscope.getScope(), mscope.getProperties());
 
 		assertFalse(sn.isEmpty());
 		assertEquals(4, sn.size());
@@ -94,7 +94,7 @@ public class IsScopedID_Tests {
 
 	@Test public void testGettestGetSymbolTypeRaw(){
 		IsScopedID_Mutable mscope=TestScope.testScope();
-		IsScopedID sn = IsScopedID.create(mscope.getScope(), mscope.getProperties());
+		IsScopedID sn = CB_Factory.createScopedID(mscope.getScope(), mscope.getProperties());
 
 		assertEquals(TestScope.ttString, sn.getSymbolType("test"));
 		assertEquals(TestScope.ttInteger, sn.getSymbolType(1));
@@ -108,7 +108,7 @@ public class IsScopedID_Tests {
 
 	@Test public void testGettestGetSymbolTypeWScope(){
 		IsScopedID_Mutable mscope=TestScope.testScope();
-		IsScopedID sn = IsScopedID.create(mscope.getScope(), mscope.getProperties());
+		IsScopedID sn = CB_Factory.createScopedID(mscope.getScope(), mscope.getProperties());
 
 		assertEquals(TestScope.ttString, sn.getSymbolType("test"));
 		assertEquals(TestScope.ttInteger, sn.getSymbolType(1));
@@ -122,7 +122,7 @@ public class IsScopedID_Tests {
 
 	@Test public void testGetValueRaw(){
 		IsScopedID_Mutable mscope=TestScope.testScope();
-		IsScopedID sn = IsScopedID.create(mscope.getScope(), mscope.getProperties());
+		IsScopedID sn = CB_Factory.createScopedID(mscope.getScope(), mscope.getProperties());
 
 		assertEquals("test:1:3.1415:true", sn.render());
 	}
@@ -130,13 +130,13 @@ public class IsScopedID_Tests {
 	@Test public void testGetValueWScope(){
 		IsScopedID_Mutable mscope=TestScope.testScope();
 
-		IsScopedID sn = IsScopedID.create(mscope.getScope(), mscope.getProperties());
+		IsScopedID sn = CB_Factory.createScopedID(mscope.getScope(), mscope.getProperties());
 		assertEquals("test:1:3.1415:true", sn.render());
 	}
 
 	@Test public void testGetPropertiesRaw(){
 		IsScopedID_Mutable mscope=TestScope.testScope();
-		IsScopedID sn = IsScopedID.create(mscope.getScope(), mscope.getProperties());
+		IsScopedID sn = CB_Factory.createScopedID(mscope.getScope(), mscope.getProperties());
 
 		assertEquals(TestScope.ttString, sn.getProperties("test").get(PropAttributes.SYMBOL_TYPE));
 		assertEquals(TestScope.ttInteger, sn.getProperties(1).get(PropAttributes.SYMBOL_TYPE));
@@ -149,7 +149,7 @@ public class IsScopedID_Tests {
 
 	@Test public void testGetPropertiesWScope(){
 		IsScopedID_Mutable mscope=TestScope.testScope();
-		IsScopedID sn = IsScopedID.create(mscope.getScope(), mscope.getProperties());
+		IsScopedID sn = CB_Factory.createScopedID(mscope.getScope(), mscope.getProperties());
 
 		assertEquals(TestScope.ttString, sn.getProperties("test").get(PropAttributes.SYMBOL_TYPE));
 		assertEquals(TestScope.ttInteger, sn.getProperties(1).get(PropAttributes.SYMBOL_TYPE));

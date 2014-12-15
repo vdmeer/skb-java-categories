@@ -103,9 +103,9 @@ public interface IsScopedID extends CategoryIs, CategoryWithValue, Skb_Renderabl
 		@Override public String _value() {return this.key;}
 	}
 
-	static IsScopedID create(Deque<Object> scope, Map<Object, Map<PropAttributes, Object>> properties){
-		return new IsScopedID_Impl(scope, properties);
-	}
+//	static IsScopedID create(Deque<Object> scope, Map<Object, Map<PropAttributes, Object>> properties){
+//		return new IsScopedID_Impl(scope, properties);
+//	}
 
 //TODOs
 //	/**

@@ -16,6 +16,7 @@
 package de.vandermeer.skb.categories.kvt;
 
 import de.vandermeer.skb.base.Skb_Defaults;
+import de.vandermeer.skb.categories.OfGroup;
 
 
 /**
@@ -24,7 +25,7 @@ import de.vandermeer.skb.base.Skb_Defaults;
  * @author     Sven van der Meer &lt;vdmeer.sven@mykolab.com&gt;
  * @version    v0.0.3-SNAPSHOT build 141210 (10-Dec-14) for Java 1.8
  */
-public interface IsPropertyKey extends IsKey_String {
+public interface IsPropertyKey extends IsKey_String, OfGroup {
 
 	/**
 	 * Returns a new generic {@link IsPropertyKey} object with a preset property key (immutable).

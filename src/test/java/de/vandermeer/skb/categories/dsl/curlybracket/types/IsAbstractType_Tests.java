@@ -9,6 +9,7 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
 import de.vandermeer.skb.categories.IsID;
+import de.vandermeer.skb.categories.dsl.curlybracket.CB_Factory;
 import de.vandermeer.skb.categories.dsl.curlybracket.IsScopedID;
 import de.vandermeer.skb.categories.dsl.curlybracket.IsScopedID_Mutable;
 import de.vandermeer.skb.categories.dsl.curlybracket.IsTokentype;
@@ -47,7 +48,7 @@ public class IsAbstractType_Tests {
 	}
 
 	@Test public void testTypeConstant(){
-		IsScopedID_Mutable scope = IsScopedID_Mutable.createMutable();
+		IsScopedID_Mutable scope = CB_Factory.createScopedID_Mutable();
 
 		scope.push("one", IsTokentype.create("string", "string", null));
 		this._typeVariableTest(scope.getStaticScope(), IsTokentype.create("string", "string", null), "bt one");
@@ -80,7 +81,7 @@ public class IsAbstractType_Tests {
 	}
 
 	@Test public void testTypeReferenceWConstant(){
-		IsScopedID_Mutable scope = IsScopedID_Mutable.createMutable();
+		IsScopedID_Mutable scope = CB_Factory.createScopedID_Mutable();
 		scope.push("a", TestTokens.STRING);
 
 		IsAbstractTypeConstant bt1 = IsAbstractTypeConstant.create(scope.getStaticScope(), TestTokens.STRING, "a base type");
@@ -134,7 +135,7 @@ public class IsAbstractType_Tests {
 	}
 
 	@Test public void testTypeReferenceWVariable(){
-		IsScopedID_Mutable scope = IsScopedID_Mutable.createMutable();
+		IsScopedID_Mutable scope = CB_Factory.createScopedID_Mutable();
 //		scope.push("a", DslFactory.get.specialTokentype("variable", "a variable type"));
 
 		IsID iA=IsID.create("a");

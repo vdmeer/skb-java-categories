@@ -48,8 +48,8 @@ public class IsScopedID_Mutable_Impl extends IsScopedID_Impl implements IsScoped
 
 	@Override
 	public IsScopedID getStaticScope(){
-		return IsScopedID.create(scope, properties);
-//
+		return new IsScopedID_Impl(scope, properties);
+
 //		Map<Object, Map<PropAttributes, Object>> props = new HashMap<Object, Map<PropAttributes, Object>>();
 //		props.putAll(this.properties);
 //
