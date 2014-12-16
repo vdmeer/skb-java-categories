@@ -1,0 +1,4 @@
+SKB Categories
+--------------
+
+Hiearchy of interfaces for categorisation.

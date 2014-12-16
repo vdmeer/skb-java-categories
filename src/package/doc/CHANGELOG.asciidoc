@@ -1,0 +1,12 @@
+v0.0.3 - feature add - 2014-##-##
+---------------------------------
+
+
+v0.0.2 - feature add - 2014-06-25
+---------------------------------
+* added type +IsCharArrayOption+ and getter in +Options+
+* changed +addOption()+ in +Options+ to return self
+
+
+v0.0.1 - initial release - 2014-06-10
+-------------------------------------
