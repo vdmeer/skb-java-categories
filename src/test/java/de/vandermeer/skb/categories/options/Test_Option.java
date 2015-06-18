@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class Option_Tests {
+public class Test_Option {
 
 	@Test public void testString(){
 		Option<String> opt=Option.create("option1", "TEST", "test description");

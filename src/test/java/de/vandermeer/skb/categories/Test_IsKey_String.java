@@ -17,44 +17,51 @@ package de.vandermeer.skb.categories;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
 import de.vandermeer.skb.base.Skb_Defaults;
-import de.vandermeer.skb.categories.kvt.IsAttributeKey;
+import de.vandermeer.skb.base.Skb_Transformer;
 import de.vandermeer.skb.categories.kvt.IsKey_String;
 
-public class IsAttributeKey_Tests {
+public class Test_IsKey_String {
 
-	@Test public void testNewAttributeKey(){
-		IsAttributeKey key;
+	@Test public void testNewKey(){
+		IsKey_String key;
 
-		key=IsAttributeKey.create();
+		key=IsKey_String.create();
 		assertNotNull(key);
 		assertTrue(key instanceof IsKey_String);
-		assertTrue(key instanceof IsAttributeKey);
 		assertEquals(Skb_Defaults.DEFAULT_VALUE, key.key());
 		assertEquals(Skb_Defaults.DEFAULT_VALUE, key._value());
 		assertEquals(Skb_Defaults.DEFAULT_DESCRIPTION, key.getDescription());
-		assertEquals("IsAttributeKey(DefaultImpl): " + Skb_Defaults.DEFAULT_VALUE, key.toString());
+		assertEquals("IsKey_String(DefaultImpl): " + Skb_Defaults.DEFAULT_VALUE, key.toString());
 
-		key=IsAttributeKey.create(null);
+		key=IsKey_String.create(null);
 		assertNotNull(key);
 		assertTrue(key instanceof IsKey_String);
-		assertTrue(key instanceof IsAttributeKey);
 		assertEquals(Skb_Defaults.DEFAULT_VALUE, key.key());
 		assertEquals(Skb_Defaults.DEFAULT_VALUE, key._value());
 		assertEquals(Skb_Defaults.DEFAULT_DESCRIPTION, key.getDescription());
-		assertEquals("IsAttributeKey(DefaultImpl): " + Skb_Defaults.DEFAULT_VALUE, key.toString());
+		assertEquals("IsKey_String(DefaultImpl): " + Skb_Defaults.DEFAULT_VALUE, key.toString());
 
-		key=IsAttributeKey.create("deadbeef");
+		key=IsKey_String.create("deadbeef");
 		assertNotNull(key);
 		assertTrue(key instanceof IsKey_String);
-		assertTrue(key instanceof IsAttributeKey);
 		assertEquals("deadbeef", key.key());
 		assertEquals("deadbeef", key._value());
 		assertEquals(Skb_Defaults.DEFAULT_DESCRIPTION, key.getDescription());
-		assertEquals("IsAttributeKey(DefaultImpl): deadbeef", key.toString());
+		assertEquals("IsKey_String(DefaultImpl): deadbeef", key.toString());
+	}
+
+	@Test public void test_Object2KeyValue(){
+		Skb_Transformer<Object, String> tf=CategoryWithValue.CAT_TO_VALUESTRING();
+		assertNull(tf.transform(null));
+	}
+
+	@Test public void test_key2Value(){
+		assertNull(CategoryWithValue.GET_VALUESTRING(null));
 	}
 }

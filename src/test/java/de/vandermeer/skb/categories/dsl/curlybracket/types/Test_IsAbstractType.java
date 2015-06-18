@@ -13,10 +13,10 @@ import de.vandermeer.skb.categories.dsl.curlybracket.CB_Factory;
 import de.vandermeer.skb.categories.dsl.curlybracket.IsScopedID;
 import de.vandermeer.skb.categories.dsl.curlybracket.IsScopedID_Mutable;
 import de.vandermeer.skb.categories.dsl.curlybracket.IsTokentype;
-import de.vandermeer.skb.categories.dsl.curlybracket.IsTokentype_tests;
-import de.vandermeer.skb.categories.dsl.curlybracket.IsTokentype_tests.TestTokens;
+import de.vandermeer.skb.categories.dsl.curlybracket.Test_IsTokentype;
+import de.vandermeer.skb.categories.dsl.curlybracket.Test_IsTokentype.TestTokens;
 
-public class IsAbstractType_Tests {
+public class Test_IsAbstractType {
 
 	@Rule public ExpectedException exception = ExpectedException.none();
 
@@ -87,9 +87,9 @@ public class IsAbstractType_Tests {
 		IsAbstractTypeConstant bt1 = IsAbstractTypeConstant.create(scope.getStaticScope(), TestTokens.STRING, "a base type");
 
 		scope.clear();
-		scope.push("scope1", IsTokentype_tests.TestTokens.REFERENCE);
+		scope.push("scope1", Test_IsTokentype.TestTokens.REFERENCE);
 		IsScopedID sc1=scope.getStaticScope();
-		scope.push("scope2", IsTokentype_tests.TestTokens.REFERENCE);
+		scope.push("scope2", Test_IsTokentype.TestTokens.REFERENCE);
 		IsScopedID sc2=scope.getStaticScope();
 		scope.push("scope3", TestTokens.REFERENCE);
 		IsScopedID sc3=scope.getStaticScope();

@@ -38,11 +38,11 @@ import de.vandermeer.skb.base.Skb_Defaults;
 import de.vandermeer.skb.base.Skb_Transformer;
 import de.vandermeer.skb.categories.IsPath;
 
-public class IsPath_Tests {
+public class Test_IsPath {
 
 	IsPath_Tests_Data ptd;
 
-	public IsPath_Tests(){
+	public Test_IsPath(){
 		this.ptd=new IsPath_Tests_Data();
 	}
 

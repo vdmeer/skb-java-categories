@@ -10,7 +10,7 @@ import org.junit.Test;
 
 import de.vandermeer.skb.categories.dsl.curlybracket.IsScopedID.PropAttributes;
 
-public class IsScopedID_Tests {
+public class Test_IsScopedID {
 
 	@Test public void testConstructorRaw(){
 		IsScopedID_Mutable mscope = new IsScopedID_Mutable_Impl();

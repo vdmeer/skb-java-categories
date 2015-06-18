@@ -8,7 +8,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-public class IsTokentype_tests {
+public class Test_IsTokentype {
 
 	@Rule public ExpectedException exception = ExpectedException.none();
 

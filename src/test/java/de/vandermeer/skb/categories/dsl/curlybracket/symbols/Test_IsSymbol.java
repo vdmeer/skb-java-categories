@@ -14,12 +14,12 @@ import de.vandermeer.skb.categories.IsID;
 import de.vandermeer.skb.categories.dsl.curlybracket.CB_Factory;
 import de.vandermeer.skb.categories.dsl.curlybracket.IsScopedID;
 import de.vandermeer.skb.categories.dsl.curlybracket.IsScopedID_Mutable;
-import de.vandermeer.skb.categories.dsl.curlybracket.IsTokentype_tests;
-import de.vandermeer.skb.categories.dsl.curlybracket.IsTokentype_tests.TestTokens;
+import de.vandermeer.skb.categories.dsl.curlybracket.Test_IsTokentype;
+import de.vandermeer.skb.categories.dsl.curlybracket.Test_IsTokentype.TestTokens;
 import de.vandermeer.skb.categories.kvt.ScopeKey;
 import de.vandermeer.skb.categories.kvt.SwitchKey;
 
-public class IsSymbol_Tests {
+public class Test_IsSymbol {
 
 	@Rule public ExpectedException exception = ExpectedException.none();
 
@@ -27,13 +27,13 @@ public class IsSymbol_Tests {
 		exception.expect(RuntimeErrorException.class);
 
 		IsScopedID_Mutable scope = CB_Factory.createScopedID_Mutable();
-		scope.push("one", IsTokentype_tests.TestTokens.STRING);
+		scope.push("one", Test_IsTokentype.TestTokens.STRING);
 		IsScopedID isi=scope.getStaticScope();
 
 		new IsSymbol_Impl(null, null, null);
-		new IsSymbol_Impl(null, null, IsTokentype_tests.TestTokens.STRING);
+		new IsSymbol_Impl(null, null, Test_IsTokentype.TestTokens.STRING);
 		new IsSymbol_Impl(IsID.create("one"), null, TestTokens.STRING);
-		new IsSymbol_Impl(null, isi, IsTokentype_tests.TestTokens.STRING);
+		new IsSymbol_Impl(null, isi, Test_IsTokentype.TestTokens.STRING);
 	}
 
 	@Test public void testTestMe(){

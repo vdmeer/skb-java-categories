@@ -15,7 +15,7 @@ import de.vandermeer.skb.categories.kvt.IsKey;
 import de.vandermeer.skb.categories.kvt.IsType;
 import de.vandermeer.skb.categories.kvt.IsValue;
 
-public class OpenList_Tests {
+public class Test_OpenList {
 
 	@Test public void testConstructor(){
 		OptionList ol=new OptionList();
@@ -31,8 +31,8 @@ public class OpenList_Tests {
 		assertEquals(5, ol.options.size());
 
 		List<Option<?>> list=new ArrayList<>();
-		list.add(OpenList_Tests.OPTION(false));
-		list.add(OpenList_Tests.OPTION('#'));
+		list.add(Test_OpenList.OPTION(false));
+		list.add(Test_OpenList.OPTION('#'));
 		ol=new OptionList(list);
 		assertNotNull(ol.options);
 		assertEquals(2, ol.options.size());
@@ -48,11 +48,11 @@ public class OpenList_Tests {
 		assertFalse(ol.hasOption((Option<?>)null));
 
 		ol.addOption(TestOptions.values());
-		ol.addOption(OpenList_Tests.OPTION(false));
-		ol.addOption(OpenList_Tests.OPTION('#'));
-		ol.addOption(OpenList_Tests.OPTION("string string"));
-		ol.addOption(OpenList_Tests.OPTION(2013));
-		ol.addOption(OpenList_Tests.OPTION(3.1415));
+		ol.addOption(Test_OpenList.OPTION(false));
+		ol.addOption(Test_OpenList.OPTION('#'));
+		ol.addOption(Test_OpenList.OPTION("string string"));
+		ol.addOption(Test_OpenList.OPTION(2013));
+		ol.addOption(Test_OpenList.OPTION(3.1415));
 
 		assertTrue(ol.hasOption(TestOptions.OPT1_STRING));
 		assertTrue(ol.hasOption(TestOptions.OPT1_STRING.name()));
@@ -72,11 +72,11 @@ public class OpenList_Tests {
 		assertNull(ol.getOption((String)null));
 
 		ol.addOption(TestOptions.values());
-		ol.addOption(OpenList_Tests.OPTION(false));
-		ol.addOption(OpenList_Tests.OPTION('#'));
-		ol.addOption(OpenList_Tests.OPTION("string string"));
-		ol.addOption(OpenList_Tests.OPTION(2013));
-		ol.addOption(OpenList_Tests.OPTION(3.1415));
+		ol.addOption(Test_OpenList.OPTION(false));
+		ol.addOption(Test_OpenList.OPTION('#'));
+		ol.addOption(Test_OpenList.OPTION("string string"));
+		ol.addOption(Test_OpenList.OPTION(2013));
+		ol.addOption(Test_OpenList.OPTION(3.1415));
 
 		assertEquals(TestOptions.OPT1_STRING, ol.getOption(TestOptions.OPT1_STRING.name()));
 		assertEquals(TestOptions.OPT1_STRING, ol.getOption(TestOptions.OPT1_STRING.getKey()._value()));
@@ -91,11 +91,11 @@ public class OpenList_Tests {
 	@Test public void testGetOptValue(){
 		OptionList ol=new OptionList(TestOptions.values());
 		ol.addOption(TestOptions.values());
-		ol.addOption(OpenList_Tests.OPTION(false));
-		ol.addOption(OpenList_Tests.OPTION('#'));
-		ol.addOption(OpenList_Tests.OPTION("string string"));
-		ol.addOption(OpenList_Tests.OPTION(2013));
-		ol.addOption(OpenList_Tests.OPTION(3.1415));
+		ol.addOption(Test_OpenList.OPTION(false));
+		ol.addOption(Test_OpenList.OPTION('#'));
+		ol.addOption(Test_OpenList.OPTION("string string"));
+		ol.addOption(Test_OpenList.OPTION(2013));
+		ol.addOption(Test_OpenList.OPTION(3.1415));
 
 		assertEquals(new Boolean(false), ol.getOptValue("BOOLEAN_OPTION", true));
 		assertEquals(new Boolean(true), ol.getOptValue("INT_OPTION", true));

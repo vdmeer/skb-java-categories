@@ -25,7 +25,7 @@ import de.vandermeer.skb.base.Skb_Defaults;
 import de.vandermeer.skb.categories.kvt.IsKey_String;
 import de.vandermeer.skb.categories.kvt.IsPropertyKey;
 
-public class IsPropertyKey_Tests {
+public class Test_IsPropertyKey {
 
 	@Test public void testNewPropertyKey(){
 		IsPropertyKey key;
