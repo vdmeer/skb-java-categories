@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.vandermeer</groupId>
 	<artifactId>skb.categories</artifactId>
-	<version>0.0.3</version>
+	<version>0.0.4-SNAPSHOT</version>
 
 	<name>SKB Categories</name>
 	<url>https://github.com/vdmeer/skb-java-categories</url>
@@ -87,7 +87,7 @@
 		<dependency>
 			<groupId>de.vandermeer</groupId>
 			<artifactId>skb.collections</artifactId>
-			<version>0.0.3</version>
+			<version>0.0.4-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
