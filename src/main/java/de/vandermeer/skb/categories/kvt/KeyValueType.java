@@ -20,7 +20,7 @@ package de.vandermeer.skb.categories.kvt;
  * Category of objects that represent a key/value/type combination.
  *
  * @author     Sven van der Meer &lt;vdmeer.sven@mykolab.com&gt;
- * @version    v0.0.4-SNAPSHOT build 150618 (18-Jun-15) for Java 1.8
+ * @version    v0.0.4 build 150619 (19-Jun-15) for Java 1.8
  */
 public interface KeyValueType<K, V, T> extends HasKey<K>, HasValueWType<V, T> {
 
