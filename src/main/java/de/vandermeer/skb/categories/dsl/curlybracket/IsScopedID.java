@@ -4,9 +4,9 @@ import java.util.Deque;
 import java.util.Map;
 
 import de.vandermeer.skb.base.Skb_Renderable;
-import de.vandermeer.skb.categories.CategoryIs;
-import de.vandermeer.skb.categories.CategoryWithValue;
-import de.vandermeer.skb.categories.kvt.IsAttributeKey;
+import de.vandermeer.skb.base.categories.CategoryIs;
+import de.vandermeer.skb.base.categories.CategoryWithValue;
+import de.vandermeer.skb.base.categories.kvt.IsAttributeKey;
 
 public interface IsScopedID extends CategoryIs, CategoryWithValue, Skb_Renderable {
 
@@ -91,7 +91,7 @@ public interface IsScopedID extends CategoryIs, CategoryWithValue, Skb_Renderabl
 	 * Keys for values associated with parts of a scoped name.
 	 *
 	 * @author     Sven van der Meer &lt;vdmeer.sven@mykolab.com&gt;
-	 * @version    v0.0.4 build 150619 (19-Jun-15) for Java 1.8
+	 * @version    v0.0.4 build 150701 (01-Jul-15) for Java 1.8
 	 */
 	public enum PropAttributes implements IsAttributeKey {
 		/** Type of the symbol represented by an element of the scoped name */

@@ -1,6 +1,6 @@
 package de.vandermeer.skb.categories.dsl.curlybracket;
 
-import de.vandermeer.skb.categories.CategoryHas;
+import de.vandermeer.skb.base.categories.CategoryHas;
 
 
 public interface HasScopedID extends CategoryHas {

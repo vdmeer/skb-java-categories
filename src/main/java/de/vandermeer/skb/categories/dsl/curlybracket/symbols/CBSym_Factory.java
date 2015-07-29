@@ -1,7 +1,7 @@
 package de.vandermeer.skb.categories.dsl.curlybracket.symbols;
 
-import de.vandermeer.skb.categories.IsFactory;
-import de.vandermeer.skb.categories.IsID;
+import de.vandermeer.skb.base.categories.IsFactory;
+import de.vandermeer.skb.base.categories.IsID;
 import de.vandermeer.skb.categories.dsl.curlybracket.IsScopedID;
 import de.vandermeer.skb.categories.dsl.curlybracket.IsTokentype;
 

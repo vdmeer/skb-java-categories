@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import de.vandermeer.skb.categories.IsID;
+import de.vandermeer.skb.base.categories.IsID;
 import de.vandermeer.skb.categories.dsl.curlybracket.IsScopedID;
 import de.vandermeer.skb.categories.dsl.curlybracket.IsTokentype;
 

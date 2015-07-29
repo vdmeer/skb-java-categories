@@ -11,9 +11,9 @@ import org.apache.commons.lang3.text.StrBuilder;
 
 import de.vandermeer.skb.base.Skb_Renderable;
 import de.vandermeer.skb.base.Skb_Transformer;
+import de.vandermeer.skb.base.categories.CategoryWithValue;
 import de.vandermeer.skb.base.utils.Skb_Antlr4Utils;
 import de.vandermeer.skb.base.utils.Skb_TextUtils;
-import de.vandermeer.skb.categories.CategoryWithValue;
 
 public class IsScopedID_Impl implements IsScopedID {
 

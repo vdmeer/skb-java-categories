@@ -10,14 +10,14 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-import de.vandermeer.skb.categories.IsID;
+import de.vandermeer.skb.base.categories.IsID;
+import de.vandermeer.skb.base.categories.kvt.ScopeKey;
+import de.vandermeer.skb.base.categories.kvt.SwitchKey;
 import de.vandermeer.skb.categories.dsl.curlybracket.CB_Factory;
 import de.vandermeer.skb.categories.dsl.curlybracket.IsScopedID;
 import de.vandermeer.skb.categories.dsl.curlybracket.IsScopedID_Mutable;
 import de.vandermeer.skb.categories.dsl.curlybracket.Test_IsTokentype;
 import de.vandermeer.skb.categories.dsl.curlybracket.Test_IsTokentype.TestTokens;
-import de.vandermeer.skb.categories.kvt.ScopeKey;
-import de.vandermeer.skb.categories.kvt.SwitchKey;
 
 public class Test_IsSymbol {
 

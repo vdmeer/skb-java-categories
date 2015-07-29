@@ -14,11 +14,11 @@ import org.apache.commons.lang3.text.StrBuilder;
 import org.stringtemplate.v4.ST;
 
 import de.vandermeer.skb.base.Skb_ToStringStyle;
-import de.vandermeer.skb.categories.IsID;
+import de.vandermeer.skb.base.categories.IsID;
+import de.vandermeer.skb.base.categories.kvt.ScopeKey;
+import de.vandermeer.skb.base.categories.kvt.SwitchKey;
 import de.vandermeer.skb.categories.dsl.curlybracket.IsScopedID;
 import de.vandermeer.skb.categories.dsl.curlybracket.IsTokentype;
-import de.vandermeer.skb.categories.kvt.ScopeKey;
-import de.vandermeer.skb.categories.kvt.SwitchKey;
 
 class IsSymbol_Impl implements IsSymbol {
 	/** Symbol Identifier */

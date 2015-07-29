@@ -3,7 +3,7 @@ package de.vandermeer.skb.categories.dsl.curlybracket;
 import java.util.Deque;
 import java.util.Map;
 
-import de.vandermeer.skb.categories.IsFactory;
+import de.vandermeer.skb.base.categories.IsFactory;
 import de.vandermeer.skb.categories.dsl.curlybracket.IsScopedID.PropAttributes;
 
 public abstract class CB_Factory implements IsFactory {

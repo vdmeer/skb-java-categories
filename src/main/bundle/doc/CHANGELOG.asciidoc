@@ -1,3 +1,9 @@
+v0.0.4 - feature remove - 2015-##-##
+------------------------------------
+* moved standard categories back to skb-base
+
+
+
 v0.0.4 - maintenance - 2015-06-19
 ---------------------------------
 * fixed artefact name, clean up, test file rename

@@ -7,13 +7,13 @@ import org.antlr.v4.runtime.Token;
 import org.antlr.v4.runtime.tree.TerminalNode;
 import org.stringtemplate.v4.ST;
 
-import de.vandermeer.skb.categories.CategoryIs;
-import de.vandermeer.skb.categories.HasID;
+import de.vandermeer.skb.base.categories.CategoryIs;
+import de.vandermeer.skb.base.categories.HasID;
+import de.vandermeer.skb.base.categories.kvt.ScopeKey;
+import de.vandermeer.skb.base.categories.kvt.SwitchKey;
 import de.vandermeer.skb.categories.dsl.curlybracket.HasScopedID;
 import de.vandermeer.skb.categories.dsl.curlybracket.HasTokentype;
 import de.vandermeer.skb.categories.dsl.curlybracket.IsScopedID;
-import de.vandermeer.skb.categories.kvt.ScopeKey;
-import de.vandermeer.skb.categories.kvt.SwitchKey;
 
 public interface IsSymbol extends CategoryIs, HasID, HasScopedID, HasTokentype {
 

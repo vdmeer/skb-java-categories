@@ -2,7 +2,7 @@ package de.vandermeer.skb.categories.dsl.curlybracket.symbols;
 
 import java.util.Collection;
 
-import de.vandermeer.skb.categories.CategoryDoes;
+import de.vandermeer.skb.base.categories.CategoryDoes;
 import de.vandermeer.skb.categories.dsl.curlybracket.IsScopedID;
 
 public interface DoesImplement extends CategoryDoes {

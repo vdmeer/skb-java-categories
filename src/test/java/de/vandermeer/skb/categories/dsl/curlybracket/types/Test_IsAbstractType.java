@@ -8,7 +8,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-import de.vandermeer.skb.categories.IsID;
+import de.vandermeer.skb.base.categories.IsID;
 import de.vandermeer.skb.categories.dsl.curlybracket.CB_Factory;
 import de.vandermeer.skb.categories.dsl.curlybracket.IsScopedID;
 import de.vandermeer.skb.categories.dsl.curlybracket.IsScopedID_Mutable;

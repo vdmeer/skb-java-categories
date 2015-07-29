@@ -1,6 +1,6 @@
 package de.vandermeer.skb.categories.dsl.curlybracket;
 
-import de.vandermeer.skb.categories.kvt.IsType;
+import de.vandermeer.skb.base.categories.kvt.IsType;
 
 public interface IsDerefType extends IsType<Object> {
 	/**

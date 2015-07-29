@@ -86,13 +86,14 @@
 	<dependencies>
 		<dependency>
 			<groupId>de.vandermeer</groupId>
-			<artifactId>skb-collections</artifactId>
-			<version>0.0.4</version>
+			<artifactId>skb-base</artifactId>
+			<version>0.1.0-SNAPSHOT</version>
 		</dependency>
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.11</version>
+			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
@@ -106,10 +107,10 @@
 				<version>1.5.0</version>
 				<executions>
 					<execution>
-						<id>package-asciidoc</id>
+						<id>bundle-asciidoc</id>
 						<phase>process-resources</phase>
 						<configuration>
-							<sourceDirectory>src/package/doc</sourceDirectory>
+							<sourceDirectory>src/main/bundle/doc</sourceDirectory>
 							<outputDirectory>./</outputDirectory>
 							<backend>html</backend>
 						</configuration>
@@ -117,19 +118,20 @@
 					</execution>
 				</executions>
 			</plugin>
+
 			<plugin>
 				<artifactId>maven-resources-plugin</artifactId>
 				<version>2.4.3</version>
 				<executions>
 					<execution>
-						<id>copy-docs</id>
+						<id>copy-bundle-docs</id>
 						<phase>generate-resources</phase>
 						<goals><goal>copy-resources</goal></goals>
 						<configuration>
 							<outputDirectory>./</outputDirectory>
 							<resources>
 								<resource>
-									<directory>src/package/doc</directory>
+									<directory>src/main/bundle/doc</directory>
 									<filtering>true</filtering>
 								</resource>
 							</resources>
@@ -196,20 +198,6 @@
 							<header>${project.name}: ${project.version}</header>
 							<footer>${project.name}: ${project.version}</footer>
 							<doctitle>${project.name}: ${project.version}</doctitle>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<executions>
-					<execution>
-						<phase>install</phase>
-						<goals>
-							<goal>copy-dependencies</goal>
-						</goals>
-						<configuration>
-							<outputDirectory>${project.build.directory}/lib</outputDirectory>
 						</configuration>
 					</execution>
 				</executions>

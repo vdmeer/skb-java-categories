@@ -3,8 +3,8 @@ package de.vandermeer.skb.categories.dsl.curlybracket.types;
 import javax.management.RuntimeErrorException;
 
 import de.vandermeer.skb.base.Skb_Defaults;
-import de.vandermeer.skb.categories.HasID;
-import de.vandermeer.skb.categories.IsID;
+import de.vandermeer.skb.base.categories.HasID;
+import de.vandermeer.skb.base.categories.IsID;
 
 public interface IsAbstractTypeVariable extends IsAbstractType, HasID {
 
