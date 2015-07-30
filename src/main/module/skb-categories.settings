@@ -1,4 +1,5 @@
 skb.module.version=0.0.4
+skb.module.alias=categories
 skb.module.name=SKB Categories
 skb.module.url=https://github.com/vdmeer/skb-java-categories
 skb.module.description=Set of interfaces to build a category hierarchy

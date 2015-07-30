@@ -3,6 +3,7 @@
 	<groupId>de.vandermeer</groupId>
 	<artifactId>skb-categories</artifactId>
 	<version>0.0.4</version>
+	<packaging>jar</packaging>
 
 	<name>SKB Categories</name>
 	<url>https://github.com/vdmeer/skb-java-categories</url>
@@ -16,7 +17,6 @@
 		<project.resources.sourceEncoding>UTF-8</project.resources.sourceEncoding>
 		<encoding>UTF-8</encoding>
 		<file.encoding>UTF-8</file.encoding>
-
 	</properties>
 
 	<licenses>
@@ -48,7 +48,7 @@
 	<scm>
 		<developerConnection>scm:git:git@github.com:vdmeer/skb-java-categories.git</developerConnection>
 		<connection>scm:git:git://github.com/vdmeer/skb-java-categories.git</connection>
-		<tag>skb-categories-0.0.3</tag>
+		<tag>skb-categories-0.0.4</tag>
 		<url>https://github.com/vdmeer/skb-java-categories</url>
 	</scm>
 
@@ -217,6 +217,6 @@
 			</plugin>
 		</plugins>
 	</build>
-	<packaging>jar</packaging>
+
 
 </project>
